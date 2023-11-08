@@ -8,7 +8,7 @@ In addition to hitting our own APIs with JavaScript, we can also make use of API
 
 ### 0. Cloning and installation
 
-- [ ] Clone this repo, navigate to it, install packages, and start the server with `npm run dev`
+- [x] Clone this repo, navigate to it, install packages, and start the server with `npm run dev`
   <details style="padding-left: 2em">
     <summary>Tip</summary>
 
