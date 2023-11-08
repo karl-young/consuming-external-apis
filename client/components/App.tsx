@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 
 import { getWelcome } from '../apiClient.ts'
 import Pokemon from './Pokemon.tsx'
+import Affirmations from './Affirmations.tsx'
 
 function App() {
   const [welcomeStatement, setWelcomeStatement] = useState('')
@@ -20,6 +21,7 @@ function App() {
     <>
       <h1>{welcomeStatement} </h1>
       <Pokemon />
+      <Affirmations />
     </>
   )
 }

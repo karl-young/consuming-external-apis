@@ -1,7 +1,7 @@
 import request from 'superagent'
 import { Welcome } from '../models/welcome.ts'
 import { Pokemon } from '../models/pokemon.ts'
-
+import { Affirmation } from '../models/affirmations.ts'
 const serverURL = '/api/v1'
 
 // *** EXAMPLE ***
@@ -12,7 +12,15 @@ export function getWelcome(): Promise<Welcome> {
 
 export async function getPokemon(): Promise<Pokemon> {
   const response = await request.get(
-    `https://pokeapi.co/api/v2/pokemon/ditto`
+    'https://pokeapi.co/api/v2/pokemon/ditto'
+  )
+  // console.log(response.body)
+  return response.body
+}
+
+export async function getAffirmations():Promise<Affirmation> {
+  const response = await request.get(
+    `/api/v1/affirmations`
   )
   // console.log(response.body)
   return response.body

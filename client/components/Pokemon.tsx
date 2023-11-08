@@ -4,11 +4,13 @@ import { Pokemon as PokemonType } from '../../models/pokemon.ts'
 
 export default function Pokemon() {
   const [pokemon, setPokemon] = useState<PokemonType | null>(null)
+
   async function fetchPokemon() {
     const pokemonData = await getPokemon()
-    // has double url? 
-    console.log(pokemonData.sprites.front_default + ' img')
-    console.log(pokemonData.sprites)
+    // has double url?
+    // console.log(pokemonData.sprites.front_default + ' img')
+    // console.log(pokemonData.sprites)
+
     setPokemon(pokemonData)
   }
 
