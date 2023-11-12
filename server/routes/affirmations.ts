@@ -1,5 +1,5 @@
-import  express  from "express";
-import router from "./welcome.ts";
+// import  express  from "express";
+// import router from "./welcome.ts";
 // we would set this up if we needed to use a key 
 
 // router.get("/", async (req, res) => {
@@ -17,4 +17,4 @@ import router from "./welcome.ts";
 // })
 
 
-export default router
+// export default router

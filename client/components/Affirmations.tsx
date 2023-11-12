@@ -20,7 +20,10 @@ export default function Affirmations() {
 
   return (
     <>
-      <p>{affirmation?.affirmation}</p>
+      <div className="affirmation">
+        <h1>Affirmations:</h1>
+        <h2>{affirmation?.affirmation}</h2>
+      </div>
     </>
   )
 }

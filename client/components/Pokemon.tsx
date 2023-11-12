@@ -7,10 +7,7 @@ export default function Pokemon() {
 
   async function fetchPokemon() {
     const pokemonData = await getPokemon()
-    // has double url?
-    // console.log(pokemonData.sprites.front_default + ' img')
-    // console.log(pokemonData.sprites)
-
+    
     setPokemon(pokemonData)
   }
 
@@ -22,12 +19,19 @@ export default function Pokemon() {
     }
   }, [])
 
+  if (pokemon === null) {
+    return <p>Loading...</p>
+  }
+
   return (
     <>
-      <h2>Pokemon!</h2>
-      <img src={pokemon?.sprites.front_default} alt={pokemon?.name} />
-      <p>{pokemon?.sprites.front_default}</p>
-      <p>{pokemon?.name}</p>
+      <div className="pokemon">
+        <h2>Pokemon!</h2>
+        <h3>{pokemon?.name}</h3>
+        <img src={pokemon?.sprites.front_default} alt="Alt Name" />
+        <p>{pokemon?.moves[0].move.name}</p>
+        <p>{pokemon?.stats[0].base_stat}</p>
+      </div>
     </>
   )
 }
