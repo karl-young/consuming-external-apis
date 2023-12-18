@@ -5,13 +5,14 @@ import { Affirmation } from '../models/affirmations.ts'
 const serverURL = '/api/v1'
 
 // *** EXAMPLE ***
-export function getWelcome(): Promise<Welcome> {
-  return request.get(`${serverURL}/welcome`).then((response) => response.body)
+export async function getWelcome(): Promise<Welcome> {
+  const response = await request.get(`${serverURL}/welcome`)
+  return response.body
 }
 // ***   ***   ***
 
 export async function getPokemon(): Promise<Pokemon> {
-  const response = await request.get('https://pokeapi.co/api/v2/pokemon/150')
+  const response = await request.get(`https://pokeapi.co/api/v2/pokemon/150`)
   
   return response.body
 }

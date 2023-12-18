@@ -8,17 +8,14 @@ function App() {
       <header>
         <Welcome />
       </header>
-      <body>
-        <div className="container">
-          <div className="pokemon">
-            <Pokemon />
-          </div>
-          <div className="affirmations">
-            <Affirmations />
-          </div>
+      <div className="container">
+        <div className="pokemon">
+          <Pokemon />
         </div>
-      </body>
-      <footer></footer>
+        <div className="affirmations">
+          <Affirmations />
+        </div>
+      </div>
     </>
   )
 }

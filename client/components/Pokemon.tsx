@@ -7,7 +7,7 @@ export default function Pokemon() {
 
   async function fetchPokemon() {
     const pokemonData = await getPokemon()
-    
+
     setPokemon(pokemonData)
   }
 
@@ -25,9 +25,9 @@ export default function Pokemon() {
 
   return (
     <>
-      <div className="pokemon">
-        <h2>Pokemon!</h2>
-        <h3>{pokemon?.name}</h3>
+      <div>
+        <h1>Pokemon!</h1>
+        <h2>{pokemon?.name}</h2>
         <img src={pokemon?.sprites.front_default} alt="Alt Name" />
         <p>{pokemon?.moves[0].move.name}</p>
         <p>{pokemon?.stats[0].base_stat}</p>
